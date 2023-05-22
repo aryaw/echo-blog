@@ -1,7 +1,7 @@
-package app
+package pkg
 
 import (
-	"blog/app/hello"
+	"blog/pkg/hello"
 
 	"github.com/labstack/echo/v4"
 )
