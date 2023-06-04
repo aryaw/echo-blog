@@ -9,3 +9,7 @@ import (
 func SayHello(c echo.Context) error {
 	return c.String(http.StatusOK, "Hello, /v1/api/ World!")
 }
+
+func PostRegister() {
+
+}

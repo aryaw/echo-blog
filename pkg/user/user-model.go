@@ -25,3 +25,10 @@ type JwtCustomClaims struct {
 	Admin bool   `json:"admin"`
 	jwt.RegisteredClaims
 }
+
+type RegisterInput struct {
+	Email     string `json:"email" binding:"required,email,min=3"`
+	FirstName string `json:"firstname" binding:"required,min=3"`
+	LastName  string `json:"lastname" binding:"required,min=3"`
+	Password  string `json:"password" binding:"required,min=6,mustalphanum"`
+}

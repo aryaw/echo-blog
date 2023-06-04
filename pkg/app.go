@@ -27,7 +27,7 @@ func ConfigureRoutes(server *s.Server) {
 
 	server.Echo.Use(middleware.Logger())
 
-	restricted := server.Echo.Group("/v1/api/")
+	restricted := server.Echo.Group("/private/api/")
 	config := echojwt.Config{
 		NewClaimsFunc: func(c echo.Context) jwt.Claims {
 			return new(user.JwtCustomClaims)
